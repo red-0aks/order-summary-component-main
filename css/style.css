@@ -1,0 +1,162 @@
+/* VARIABLES */
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    /* SOMBRA */
+    --shadow: 0 20px 30px  rgba(56, 41, 224, 0.2);
+}
+
+/* GLOBAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+a{
+    transition: .3s all ease-in-out;
+}
+
+
+/* MOBILE FIRST */
+.bgnd-img{
+    background: url('../images/pattern-background-mobile.svg') no-repeat center/cover;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 470px;
+    /* max-height: 800px; */
+    margin: 5%;
+    box-shadow: var(--shadow);
+}
+
+.img-hero {
+    max-width: 100%;
+    width: 100%;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 30px;
+    
+}
+
+.card .order-descrip{
+    color: var(--desaturated-blue);
+    max-width: 278px;
+    margin: 25px auto;
+}
+
+.plan-card{
+    background-color: var(--very-pale-blue);
+    max-width: 312px;
+    width: 90%;
+    border-radius: 12px;
+    padding: 15px 15px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan{
+    display: flex;
+}
+
+.plan-descrip{
+    margin-left: 16px;
+}
+
+.plan-title{
+    font-weight: 900;
+}
+
+.plan-price{
+    color: var(--desaturated-blue);
+}
+
+.change-plan{
+    color: var(--bright-blue);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.change-plan:hover{
+    color: rgba(56, 41, 224, 0.7);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    max-width: 312px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.buttons a{
+    text-decoration: none;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.cta-pay{
+    background-color: var(--bright-blue);
+    border-radius: 12px;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.cta-pay:hover{
+    background-color: rgba(56, 41, 224, 0.7);
+}
+
+.btn-cancel{
+    color: var(--desaturated-blue);
+}
+
+.btn-cancel:hover{
+    color: var(--dark-blue);
+}
+
+/* ATTRIBUTION */
+.attribution { 
+    padding: 16px;
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px){
+    .bgnd-img{
+        background: url('../images/pattern-background-desktop.svg') no-repeat center/cover;
+        height: 500px;
+    }
+}
